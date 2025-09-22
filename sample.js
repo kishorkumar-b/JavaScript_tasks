@@ -31,3 +31,15 @@ function myFunction(value, index, array) {
   return value > 18;
 }
 console.log(first)
+
+const lastnumbers = [4, 9, 16, 25, 29];
+let lastindx = lastnumbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+console.log(lastindx)
+
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast(x => x > 30);
+console.log(high)
