@@ -1,3 +1,6 @@
+const { Console } = require("console")
+const { object } = require("prop-types")
+
 const arr=['apple','babana','mango','kiwi']
 arr.sort()
 console.log(arr)
@@ -83,3 +86,73 @@ const arr32 = new Int32Array(3)
 console.log(arr8.byteLength)  
 console.log(arr16.byteLength)
 console.log(arr32.byteLength) 
+
+console.log(Int16Array.from("1234567890"))
+console.log(Int16Array.from([1,2,3,4,5,6,7,8,9,0]))
+
+//math object
+
+console.log(Math.E)
+console.log(Math.PI)
+console.log(Math.SQRT2)
+console.log(Math.SQRT1_2)
+console.log(Math.LN2)
+console.log(Math.LN10)
+console.log(Math.LOG2E)
+
+
+
+console.log(Math.round(30.4))
+console.log(Math.trunc(-4.5))
+
+console.log(Math.ceil(-4.2))
+
+console.log(Math.sign(-10))
+
+console.log(Math.pow(8, 2))
+
+console.log(Math.ceil(Math.random()*10))
+
+const person = {
+  firstName: "John",
+  lastName: "Doe"
+};
+const man=Object.create(person);
+console.log(man.firstName)
+
+const fruits = [["apples", 300],["pears", 900],["bananas", 500]];
+const fruits_object=Object.fromEntries(fruits)
+console.log(fruits_object)
+
+const person1={
+    name:'kishor',
+    age:20,
+    depart:'it'
+}
+const person2={
+    name:'ravi',
+    age:30
+}
+
+const man1= Object.assign(person1,person2)
+console.log(man1)
+
+const obj = { id: 1 };
+console.log(Object.hasOwn(obj, "id")); 
+console.log(Object.hasOwn(obj, "toString"));
+console.log(Object.getOwnPropertyDescriptors(obj,"id"))
+
+const obj1 = {};
+Object.defineProperty(obj1, "hidden", { value: 42, enumerable: false });
+console.log(Object.keys(obj1));               // []         (enumerable only)
+console.log(Object.getOwnPropertyNames(obj1)) // ["hidden"]
+console.log(Object.hasOwn(obj1,"hidden"))
+
+
+const s = Symbol("id");
+const n=Symbol("name")
+const obj2 = { [s]: 123 ,[n]:'kishor'};
+console.log(Object.keys(obj2))
+console.log(Object.getOwnPropertySymbols(obj2)); 
+
+
