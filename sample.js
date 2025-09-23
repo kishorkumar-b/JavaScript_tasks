@@ -43,3 +43,4 @@ console.log(lastindx)
 const temp = [27, 28, 30, 40, 42, 35, 30];
 let high = temp.findLast(x => x > 30);
 console.log(high)
+
