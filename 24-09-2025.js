@@ -84,7 +84,7 @@ const superset = A.isSupersetOf(B)
 console.log(superset)
 
 const disjoin = A.isDisjointFrom(B)
-console.log(disjoin)
+console.log('dis'+disjoin)
 
 let myset=new WeakSet()
 
