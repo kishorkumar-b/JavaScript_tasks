@@ -11,9 +11,9 @@
     <h1>Calculator</h1>
     <div class="container">
      <div class="calculator">
-    <input type="text" id="display" onkeypress="numbers(event)">
+    <input type="text" id="display" onkeypress="numbers(event)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     <div class="buttons">
-      <button class="clear"   >C</button>
+      <button class="clear" onclick="cleardisplay()">C</button>
       <button onclick="appendValue('/')">÷</button>
       <button onclick="appendValue('*')">×</button>
       <button onclick="appendValue('-')">-</button>
@@ -31,12 +31,20 @@
       <button onclick="appendValue('7')">7</button>
       <button onclick="appendValue('8')">8</button>
       <button onclick="appendValue('9')">9</button>
-      <button onclick="deleteLast()">⌫</button>
+      <button onclick="deletelast()">⌫</button>
 
       <button onclick="appendValue('0')">0</button>
       <button class="equal" onclick="calculateresult()">=</button>
+      <button onclick="toggleHistory()">&#x1F504;</button>
     </div>
   </div>
+      <div id="historyPanel" class="history-panel">
+      <h2 >History</h2>
+      <ul id="historyList" ></ul>
+      <div style="display:flex; gap:6px; justify-content:flex-end;">
+        <button onclick="clearHistory()">Clear</button>
+        <button onclick="toggleHistory(false)">Close</button>
+      </div>
   </div>
     <script src="./scripts.js"></script>
 </body>
